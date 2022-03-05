@@ -29,6 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function initMap() {
   navigator.geolocation.getCurrentPosition(pos => {
     const { latitude: lat, longitude: lng } = pos.coords
+    console.log(longitude+ ' ' + latitude)
     map = new google.maps.Map(document.getElementById('map'), {
       center: { lat, lng },
       zoom: 2
